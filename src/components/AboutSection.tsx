@@ -1,8 +1,12 @@
-
+import React from 'react';
 import { Shield, Check, Clock, Users, Settings, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const AboutSection = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="about" className="py-20 md:py-32 bg-white relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-blue-50 via-white to-white opacity-70"></div>
@@ -100,7 +104,7 @@ const AboutSection = () => {
               </div>
             </div>
             
-            <Button size="lg">
+            <Button size="lg" onClick={scrollToContact}>
               Get a Free Consultation
             </Button>
           </div>
