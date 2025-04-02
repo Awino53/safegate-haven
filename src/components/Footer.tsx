@@ -75,7 +75,9 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-safenet-orange" />
                 <a 
-                  href="mailto:estherojul53@gmail.com?subject=SafeNet%20Inquiry" 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=estherojul53@gmail.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   estherojul53@gmail.com

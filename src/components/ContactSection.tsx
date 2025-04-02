@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -79,7 +78,9 @@ const ContactSection = () => {
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
                   <a 
-                    href="mailto:estherojul53@gmail.com?subject=SafeNet%20Inquiry" 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=estherojul53@gmail.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className="text-safenet-gray hover:text-safenet-blue transition-colors"
                   >
                     estherojul53@gmail.com
