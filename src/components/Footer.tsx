@@ -1,4 +1,3 @@
-
 import { Shield, ShieldCheck, Facebook, Twitter, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -75,7 +74,10 @@ const Footer = () => {
             <div className="space-y-4 mb-6">
               <div className="flex items-center gap-3">
                 <Mail size={18} className="text-safenet-orange" />
-                <a href="mailto:estherojul53@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                <a 
+                  href="mailto:estherojul53@gmail.com?subject=SafeNet%20Inquiry" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   estherojul53@gmail.com
                 </a>
               </div>
