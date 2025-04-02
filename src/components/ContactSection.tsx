@@ -22,12 +22,29 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill out all required fields.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Format the message for WhatsApp
+    const whatsappMessage = encodeURIComponent(
+      `New message from SafeNet website:\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage: ${formData.message}`
+    );
+    
+    // Open WhatsApp with the pre-filled message
+    window.open(`https://wa.me/254799091398?text=${whatsappMessage}`, '_blank');
     
     // Show success toast
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
+      title: "Message Ready to Send",
+      description: "You'll be redirected to WhatsApp to complete sending your message.",
     });
     
     // Reset form
@@ -182,7 +199,7 @@ const ContactSection = () => {
               
               <Button type="submit" className="w-full flex items-center gap-2">
                 <Send className="h-4 w-4" />
-                Send Message
+                Send Message to WhatsApp
               </Button>
             </form>
           </div>

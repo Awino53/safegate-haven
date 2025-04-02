@@ -40,10 +40,10 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="w-full sm:w-auto">
+            <Button size="lg" className="w-full sm:w-auto" onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}>
               Explore Our Services
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
               Get a Free Consultation
             </Button>
           </div>
